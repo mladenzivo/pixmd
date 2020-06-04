@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-pixmd-dev-144538-authRole",
+            "UnauthRoleArn": "arn:aws:iam::934495627614:role/amplify-pixmd-dev-144538-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::934495627614:role/amplify-pixmd-dev-144538-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-pixmd-dev-144538-deployment",
+            "UnauthRoleName": "amplify-pixmd-dev-144538-unauthRole",
+            "StackName": "amplify-pixmd-dev-144538",
+            "StackId": "arn:aws:cloudformation:us-east-1:934495627614:stack/amplify-pixmd-dev-144538/beec59b0-a626-11ea-ae7f-12c1d85cca19",
+            "AmplifyAppId": "d124lnf3bh2zv2"
+        }
+    }
+}

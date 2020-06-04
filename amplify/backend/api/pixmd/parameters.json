@@ -1,0 +1,5 @@
+{
+    "AppSyncApiName": "pixmd",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false"
+}
