@@ -1,0 +1,25 @@
+.landing-page {
+  .summary {
+    .summary-title {
+      margin-top: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
+      color: $blue
+    }
+    .description {
+      margin-top: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      color: $blue;
+      margin-bottom: 25px;
+    }
+  }
+  .get-started {
+    background: #504DE5 0% 0% no-repeat padding-box !important;
+    border-radius: 25px;
+    opacity: 1;
+    min-width: 347px;
+    height: 50px;
+  }
+  
+}
