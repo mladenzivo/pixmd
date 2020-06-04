@@ -4,6 +4,8 @@ import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import "../../assets/scss/plugins/extensions/swiper.scss";
 
+import Summary from "../../components/pages/Summary";
+
 import img1 from "../../assets/img/slider/Image1.png";
 import img2 from "../../assets/img/slider/Image2.png";
 import img3 from "../../assets/img/slider/Image3.png";
@@ -48,26 +50,22 @@ class LandingPage extends React.Component {
   render = () => {
     return (
       <Container className="landing-page">
-        <div className="summary text-center">
-          <h1 className="summary-title">{`BrowserBefore & After Photos`}</h1>
-          <div className="description">
-            <p>
-              Welcome to the easiest way to explore the before and after photos
-              of plastic surgeons.
-            </p>
-            <p>Follow you favorites, ask questions and book an appointment.</p>
-          </div>
-          <Row className="justify-content-center mb-2">
-            <Col className="text-center m-2" md={2}>
-              <Button.Ripple color="info">GET STARTED</Button.Ripple>
-            </Col>
-            <Col className="text-center m-2" md={2}>
-              <Button.Ripple outline color="info">
-                LEARN MORE
-              </Button.Ripple>
-            </Col>
-          </Row>
-        </div>
+        <Summary
+          title={`BrowserBefore & After Photos`}
+          description="Welcome to the easiest way to explore the before and after photos of
+          plastic surgeons. Follow you favorites, ask questions and book an
+          appointment."
+        />
+        <Row className="justify-content-center mb-2">
+          <Col className="text-center m-2" md={2}>
+            <Button.Ripple color="info">GET STARTED</Button.Ripple>
+          </Col>
+          <Col className="text-center m-2" md={2}>
+            <Button.Ripple outline color="info">
+              LEARN MORE
+            </Button.Ripple>
+          </Col>
+        </Row>
         <div className="slider mb-2 p-2">
           <Swiper {...params}>
             <div>
