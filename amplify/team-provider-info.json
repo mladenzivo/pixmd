@@ -10,6 +10,11 @@
             "StackName": "amplify-pixmd-dev-144538",
             "StackId": "arn:aws:cloudformation:us-east-1:934495627614:stack/amplify-pixmd-dev-144538/beec59b0-a626-11ea-ae7f-12c1d85cca19",
             "AmplifyAppId": "d124lnf3bh2zv2"
+        },
+        "categories": {
+            "auth": {
+                "pixmdbb3d7072": {}
+            }
         }
     }
 }
