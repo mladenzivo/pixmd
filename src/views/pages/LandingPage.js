@@ -47,9 +47,14 @@ const params = {
 };
 
 class LandingPage extends React.Component {
+  handleClick = (name) => {
+    if (name === "get_started") this.props.history.push("/register");
+    else this.props.history.push("/");
+  };
+
   render = () => {
     return (
-      <Container className="landing-page">
+      <Container>
         <Summary
           title={`BrowserBefore & After Photos`}
           description="Welcome to the easiest way to explore the before and after photos of
@@ -58,10 +63,19 @@ class LandingPage extends React.Component {
         />
         <Row className="justify-content-center mb-2">
           <Col className="text-center m-2" md={2}>
-            <Button.Ripple color="info">GET STARTED</Button.Ripple>
+            <Button.Ripple
+              color="info"
+              onClick={() => this.handleClick("get_started")}
+            >
+              GET STARTED
+            </Button.Ripple>
           </Col>
           <Col className="text-center m-2" md={2}>
-            <Button.Ripple outline color="info">
+            <Button.Ripple
+              outline
+              color="info"
+              onClick={() => this.handleClick("learn_more")}
+            >
               LEARN MORE
             </Button.Ripple>
           </Col>
@@ -95,7 +109,12 @@ class LandingPage extends React.Component {
           </Swiper>
         </div>
         <div className="text-center">
-          <Button className="get-started">Get Started</Button>
+          <Button
+            className="pix_btn get-started"
+            onClick={() => this.handleClick("get_started")}
+          >
+            Get Started
+          </Button>
         </div>
       </Container>
     );

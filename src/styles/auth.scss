@@ -1,0 +1,30 @@
+.auth {
+  padding: 5% 30%;
+  .form-control {
+    border-radius: 12px;
+  }
+  .signup {
+    width: 100%;
+  }
+  .div-or {
+    div {
+      width: 50px;
+      height: 30px;
+      background-color: #FFFFFF; 
+    }
+  }
+  .facebook {
+    background: #475A96 0% 0% no-repeat padding-box !important;
+  }  
+  .twitter {
+    background: #5CA2F2 0% 0% no-repeat padding-box !important;
+  }
+  .text {
+    p {
+      font-size: 14px;
+      line-height: 26px;
+      width: 70%;
+      margin: auto
+    }
+  }
+}

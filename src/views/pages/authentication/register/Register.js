@@ -1,24 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Container,
   Row,
   Col,
   Button,
+  Input,
+  Label,
   Form,
   FormGroup,
-  Label,
-  Input,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+
 import Summary from "../../../../components/pages/Summary";
+import Radio from "../../../../components/@vuexy/radio/RadioVuexy";
 import Checkbox from "../../../../components/@vuexy/checkbox/CheckboxesVuexy";
 import { Check } from "react-feather";
 
-class Login extends React.Component {
+class Register extends React.Component {
   render = () => (
     <Container>
       <Summary
-        title="Sign-in"
+        title="Create an Account"
         description="Welcome to the easiest way to explore the before and after photos of
         plastic surgeons. Follow you favorites, ask questions and book an
         appointment."
@@ -32,45 +34,53 @@ class Login extends React.Component {
           <Input type="password" id="pass" bsSize="lg" placeholder="Password" />
           <Label for="pass">Password</Label>
         </FormGroup>
-        <FormGroup className="text-right ">
-          <Link to="/forgot-password" className="font-medium-2 text-bold-500 mb-1">
-            Forgot Password?
-          </Link>
+        <FormGroup className="form-label-group">
+          <Input type="password" id="conf" bsSize="lg" placeholder="Confirm" />
+          <Label for="conf">Confirm</Label>
         </FormGroup>
+        <FormGroup>
+          <div className="font-medium-2 text-bold-600 mb-1">
+            Type of Account
+          </div>
+          <Row>
+            <Col md={6}>
+              <Radio
+                label="Customer/Patient"
+                color="primary"
+                defaultChecked={true}
+                name="exampleRadioColors"
+              />
+            </Col>
+            <Col md={6}>
+              <Radio
+                label="Doctor/Provider"
+                color="primary"
+                defaultChecked={false}
+                name="exampleRadioColors"
+              />
+            </Col>
+          </Row>
+        </FormGroup>
+        <hr />
         <FormGroup>
           <div className="d-inline-block mr-1">
             <Checkbox
               color="primary"
               icon={<Check className="vx-icon" size={16} />}
               defaultChecked={true}
-              label="Remember me"
+              label={`Site usage terms & conditions. I agree`}
               size="md"
             />
           </div>
         </FormGroup>
         <FormGroup>
-          <Button className="pix_btn signup">Sign In</Button>
-        </FormGroup>
-        <FormGroup className="my-3">
-          <div className="div-or d-flex justify-content-center">
-            <div className="text-center d-flex justify-content-center align-items-center">OR</div>
-          </div>
-        </FormGroup>
-        <FormGroup>
-          <Row>
-            <Col md={6}>
-              <Button className="pix_btn facebook w-100">facebook</Button>
-            </Col>
-            <Col md={6}>
-              <Button className="pix_btn twitter w-100">Twitter</Button>
-            </Col>
-          </Row>
+          <Button className="pix_btn signup">Sign up</Button>
         </FormGroup>
         <FormGroup>
           <div>
-            need an account?{" "}
+            already remember?{" "}
             <span>
-              <Link to="/register">Sign up</Link>
+              <Link to="/sign-in">Sign in</Link>
             </span>
           </div>
         </FormGroup>
@@ -78,4 +88,4 @@ class Login extends React.Component {
     </Container>
   );
 }
-export default Login;
+export default Register;
