@@ -5,6 +5,10 @@ import "./components/@vuexy/rippleButton/RippleButton"
 import "react-perfect-scrollbar/dist/css/styles.css"
 import "prismjs/themes/prism-tomorrow.css"
 
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
 const App = props => {
   return <Router />
 }

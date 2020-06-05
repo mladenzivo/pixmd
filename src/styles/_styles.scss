@@ -8,6 +8,12 @@
   min-height: 50px;
 }
 
+.error-msg {
+  color: red;
+  height: 20px;
+  text-align: center;
+}
+
 .summary {
   .summary-title {
     margin-top: 20px;
@@ -22,7 +28,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: $blue;
-    margin-bottom: 25px;
     p {
       line-height: 30px;
     }

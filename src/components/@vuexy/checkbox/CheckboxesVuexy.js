@@ -9,6 +9,7 @@ class CheckBoxesVuexy extends React.Component {
       >
         <input
           type="checkbox"
+          name={this.props.name}
           defaultChecked={this.props.defaultChecked}
           checked={this.props.checked}
           value={this.props.value}
