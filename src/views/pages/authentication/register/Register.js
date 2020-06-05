@@ -61,14 +61,14 @@ class Register extends React.Component {
     }
 
     try {
-      const user = await Auth.signUp({
+      await Auth.signUp({
         username: email,
         password: password,
         attributes: {
-          user_type: customer ? true : false,
+          'custom:user_type': customer ? "customer" : "doctor",
         },
       });
-      console.log(user);
+      this.setState({ isLoading: false });
     } catch (e) {
       this.setState({ isLoading: false, errorMsg: e.message });
     }
