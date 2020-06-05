@@ -44,7 +44,7 @@ const UserDropdown = props => {
       <DropdownItem
         tag="a"
         href="#"
-        onClick={e => history.push("/pages/login")}
+        onClick={e => history.push("/sign-in")}
       >
         <Icon.Power size={14} className="mr-50" />
         <span className="align-middle">Log Out</span>
