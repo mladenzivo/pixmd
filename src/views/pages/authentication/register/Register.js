@@ -65,10 +65,12 @@ class Register extends React.Component {
         username: email,
         password: password,
         attributes: {
-          'custom:user_type': customer ? "customer" : "doctor",
+          "custom:user_type": customer ? "customer" : "doctor",
         },
       });
       this.setState({ isLoading: false });
+      this.props.history.push("/email-verification", { email: email });
+
     } catch (e) {
       this.setState({ isLoading: false, errorMsg: e.message });
     }

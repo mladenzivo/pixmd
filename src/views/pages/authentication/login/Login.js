@@ -15,6 +15,13 @@ import Checkbox from "../../../../components/@vuexy/checkbox/CheckboxesVuexy";
 import { Check } from "react-feather";
 
 class Login extends React.Component {
+  state = {
+    email: "",
+    password: "",
+    isLoading: false,
+    errorMsg: ""
+  }
+
   render = () => (
     <Container>
       <Summary
