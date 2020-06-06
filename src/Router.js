@@ -18,6 +18,11 @@ const Register = lazy(() =>
   import("./views/pages/authentication/register/Register")
 )
 
+const Confirm = lazy(() =>
+  import("./views/pages/authentication/ConfirmAccount")
+)
+
+
 const ForgotPassword = lazy(() =>
   import("./views/pages/authentication/ForgotPassword")
 )
@@ -83,6 +88,7 @@ class AppRouter extends React.Component {
         <Switch>
           <AppRoute path="/sign-in" component={SignIn} />
           <AppRoute path="/register" component={Register}/>
+          <AppRoute path="/email-verification" component={Confirm} />
           <AppRoute path="/forgot-password" component={ForgotPassword}/>
           <AppRoute path="/reset-password" component={ResetPassword}/>
           <AppRoute path="/pages/home" component={Home} />
