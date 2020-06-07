@@ -90,7 +90,7 @@ const ThemeNavbar = (props) => {
                   </NavItem>
                 </Nav>
               </Collapse>
-              {!props.user.isLoginSuccess ? (
+              {!props.user.isAuthenticated ? (
                 <Nav>
                   <NavItem>
                     <NavLink className="text-white" href="/register">SIGN UP</NavLink>

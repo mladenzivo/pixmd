@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { Redirect, Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -70,7 +71,6 @@ class Register extends React.Component {
       });
       this.setState({ isLoading: false });
       this.props.history.push("/email-verification", { email: email });
-
     } catch (e) {
       this.setState({ isLoading: false, errorMsg: e.message });
     }
@@ -87,6 +87,11 @@ class Register extends React.Component {
       errorMsg,
       isLoading,
     } = this.state;
+
+    const { user } = this.props;
+    if (user.isAuthenticated) {
+      return <Redirect to="/" />;
+    }
 
     return (
       <Container>
@@ -209,4 +214,9 @@ class Register extends React.Component {
     );
   };
 }
-export default Register;
+
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Register);
