@@ -8,6 +8,8 @@ import {
   FormGroup,
   Spinner,
 } from "reactstrap";
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import Summary from "../../../components/pages/Summary";
 import { Auth } from "aws-amplify";
 
@@ -48,7 +50,12 @@ class ConfirmAccount extends Component {
   };
 
   render = () => {
+    const { user } = this.props
     const { email, vcode, isLoading, errorMsg } = this.state;
+
+    if (user.isAuthenticated) {
+      return <Redirect to="/" />
+    }
 
     return (
       <Container>
@@ -104,4 +111,8 @@ class ConfirmAccount extends Component {
   };
 }
 
-export default ConfirmAccount;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(ConfirmAccount);
