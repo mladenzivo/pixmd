@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   NavItem,
   NavLink,
@@ -7,17 +7,16 @@ import {
   DropdownItem,
   DropdownToggle,
   Media,
-  Badge
-} from "reactstrap"
-import PerfectScrollbar from "react-perfect-scrollbar"
-import axios from "axios"
-import * as Icon from "react-feather"
-import classnames from "classnames"
-import Autocomplete from "../../../components/@vuexy/autoComplete/AutoCompleteComponent"
-import { history } from "../../../history"
+  Badge,
+} from "reactstrap";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import axios from "axios";
+import * as Icon from "react-feather";
+import classnames from "classnames";
+import Autocomplete from "../../../components/@vuexy/autoComplete/AutoCompleteComponent";
+// import { history } from "../../../history";
 
-
-const UserDropdown = props => {
+const UserDropdown = (props) => {
   return (
     <DropdownMenu right>
       <DropdownItem tag="a" href="#">
@@ -44,38 +43,38 @@ const UserDropdown = props => {
       <DropdownItem
         tag="a"
         href="#"
-        onClick={e => history.push("/sign-in")}
+        onClick={(e) => {
+          props.userSignOut();
+        }}
       >
         <Icon.Power size={14} className="mr-50" />
         <span className="align-middle">Log Out</span>
       </DropdownItem>
     </DropdownMenu>
-  )
-}
+  );
+};
 
 class NavbarUser extends React.PureComponent {
   state = {
     navbarSearch: false,
-    suggestions: []
-  }
+    suggestions: [],
+  };
 
   componentDidMount() {
     axios.get("/api/main-search/data").then(({ data }) => {
-      this.setState({ suggestions: data.searchResult })
-    })
+      this.setState({ suggestions: data.searchResult });
+    });
   }
 
   handleNavbarSearch = () => {
     this.setState({
-      navbarSearch: !this.state.navbarSearch
-    })
-  }
-
+      navbarSearch: !this.state.navbarSearch,
+    });
+  };
 
   render() {
     return (
       <ul className="nav navbar-nav navbar-nav-user float-right">
-
         <NavItem className="nav-search" onClick={this.handleNavbarSearch}>
           <NavLink className="nav-link-search">
             <Icon.Search size={21} data-tour="search" />
@@ -83,7 +82,7 @@ class NavbarUser extends React.PureComponent {
           <div
             className={classnames("search-input", {
               open: this.state.navbarSearch,
-              "d-none": this.state.navbarSearch === false
+              "d-none": this.state.navbarSearch === false,
             })}
           >
             <div className="search-input-icon">
@@ -98,15 +97,15 @@ class NavbarUser extends React.PureComponent {
               placeholder="Explore Vuexy..."
               autoFocus={true}
               clearInput={this.state.navbarSearch}
-              externalClick={e => {
-                this.setState({ navbarSearch : false })
+              externalClick={(e) => {
+                this.setState({ navbarSearch: false });
               }}
-              onKeyDown={e => {
+              onKeyDown={(e) => {
                 if (e.keyCode === 27 || e.keyCode === 13) {
                   this.setState({
-                    navbarSearch: false
-                  })
-                  this.props.handleAppOverlay("")
+                    navbarSearch: false,
+                  });
+                  this.props.handleAppOverlay("");
                 }
               }}
               customRender={(
@@ -117,14 +116,14 @@ class NavbarUser extends React.PureComponent {
                 onSuggestionItemClick,
                 onSuggestionItemHover
               ) => {
-                const IconTag = Icon[item.icon ? item.icon : "X"]
+                const IconTag = Icon[item.icon ? item.icon : "X"];
                 return (
                   <li
                     className={classnames("suggestion-item", {
-                      active: filteredData.indexOf(item) === activeSuggestion
+                      active: filteredData.indexOf(item) === activeSuggestion,
                     })}
                     key={i}
-                    onClick={e => onSuggestionItemClick(item.link, e)}
+                    onClick={(e) => onSuggestionItemClick(item.link, e)}
                     onMouseEnter={() =>
                       onSuggestionItemHover(filteredData.indexOf(item))
                     }
@@ -132,7 +131,7 @@ class NavbarUser extends React.PureComponent {
                     <div
                       className={classnames({
                         "d-flex justify-content-between align-items-center":
-                          item.file || item.img
+                          item.file || item.img,
                       })}
                     >
                       <div className="item-container d-flex">
@@ -180,11 +179,11 @@ class NavbarUser extends React.PureComponent {
                       ) : null}
                     </div>
                   </li>
-                )
+                );
               }}
-              onSuggestionsShown={userInput => {
+              onSuggestionsShown={(userInput) => {
                 if (this.state.navbarSearch) {
-                  this.props.handleAppOverlay(userInput)
+                  this.props.handleAppOverlay(userInput);
                 }
               }}
             />
@@ -192,11 +191,11 @@ class NavbarUser extends React.PureComponent {
               <Icon.X
                 size={24}
                 onClick={(e) => {
-                  e.stopPropagation()
+                  e.stopPropagation();
                   this.setState({
-                    navbarSearch: false
-                  })
-                  this.props.handleAppOverlay("")
+                    navbarSearch: false,
+                  });
+                  this.props.handleAppOverlay("");
                 }}
               />
             </div>
@@ -223,7 +222,7 @@ class NavbarUser extends React.PureComponent {
             <PerfectScrollbar
               className="media-list overflow-hidden position-relative"
               options={{
-                wheelPropagation: false
+                wheelPropagation: false,
               }}
             >
               <div className="d-flex justify-content-between">
@@ -382,7 +381,7 @@ class NavbarUser extends React.PureComponent {
           <UserDropdown {...this.props} />
         </UncontrolledDropdown>
       </ul>
-    )
+    );
   }
 }
-export default NavbarUser
+export default NavbarUser;

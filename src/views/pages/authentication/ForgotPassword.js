@@ -6,7 +6,7 @@ import close from "../../../assets/img/svg/Close.svg"
 
 class ForgotPassword extends Component {
   state = {
-    isSent: true,
+    isSent: false,
   };
 
   handleClickSend = () => {
@@ -40,11 +40,11 @@ class ForgotPassword extends Component {
                 password.
               </p>
             </div>
-            <FormGroup className="form-label-group">
+            <FormGroup className="form-label-group mb-5">
               <Input type="text" id="email" bsSize="lg" placeholder="Email" />
               <Label for="email">Email</Label>
             </FormGroup>
-            <FormGroup>
+            <FormGroup className="mt-5">
               <Button className="pix_btn signup" onClick={this.handleClickSend}>
                 Send
               </Button>
