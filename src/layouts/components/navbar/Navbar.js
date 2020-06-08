@@ -17,7 +17,7 @@ const ThemeNavbar = (props) => {
   const navbarTypes = ["floating", "static", "sticky", "hidden"];
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  console.log(props.user);
+
   return (
     <React.Fragment>
       <div className="content-overlay" />
