@@ -151,7 +151,7 @@ class Login extends React.Component {
           </FormGroup>
           <FormGroup>
             <Row>
-              <Col md={6} sm={12}>
+              <Col md={4} sm={12}>
                 <Link
                   className="btn btn-primary pix_btn facebook w-100 d-flex justify-content-center align-items-center"
                   to="#"
@@ -160,13 +160,22 @@ class Login extends React.Component {
                   Facebook
                 </Link>
               </Col>
-              <Col md={6} sm={12}>
+              <Col md={4} sm={12}>
                 <Link
                   className="btn btn-primary pix_btn google w-100 d-flex justify-content-center align-items-center"
                   to="#"
                   onClick={() => Auth.federatedSignIn({provider: 'Google'})}
                 >
                   Google
+                </Link>
+              </Col>
+              <Col md={4} sm={12}>
+                <Link
+                  className="btn btn-primary pix_btn amazon w-100 d-flex justify-content-center align-items-center"
+                  to="#"
+                  onClick={() => Auth.federatedSignIn({provider: 'LoginWithAmazon'})}
+                >
+                  Amazon
                 </Link>
               </Col>
             </Row>

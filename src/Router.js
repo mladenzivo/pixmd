@@ -31,6 +31,10 @@ const ResetPassword = lazy(() =>
   import("./views/pages/authentication/ResetPassword")
 )
 
+const CreateSubscription = lazy(() =>
+  import("./views/pages/CreateSubscription")
+)
+
 const Home = lazy(() =>
   import("./views/pages/Home")
 )
@@ -91,6 +95,7 @@ class AppRouter extends React.Component {
           <AppRoute path="/email-verification" component={Confirm} />
           <AppRoute path="/forgot-password" component={ForgotPassword}/>
           <AppRoute path="/reset-password" component={ResetPassword}/>
+          <AppRoute path="/create-subscription" component={CreateSubscription} />
           <AppRoute path="/pages/home" component={Home} />
           <AppRoute path="/pages2" component={Page2} />
           <AppRoute exact path="/" component={LandingPage} />

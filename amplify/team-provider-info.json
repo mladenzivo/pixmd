@@ -14,7 +14,7 @@
         "categories": {
             "auth": {
                 "pixmddb38f4bd": {
-                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"566099117422027\",\"client_secret\":\"610fc0cc5c1ca617585e467468f2c3ac\"},{\"ProviderName\":\"Google\",\"client_id\":\"224109596308-lt9l7vhq05q09gegjpav3947m1s3odhf.apps.googleusercontent.com\",\"client_secret\":\"hvsQFuE3dq2Av4f0PePT5ScL\"}]"
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"566099117422027\",\"client_secret\":\"610fc0cc5c1ca617585e467468f2c3ac\"},{\"ProviderName\":\"Google\",\"client_id\":\"224109596308-lt9l7vhq05q09gegjpav3947m1s3odhf.apps.googleusercontent.com\",\"client_secret\":\"hvsQFuE3dq2Av4f0PePT5ScL\"},{\"ProviderName\":\"LoginWithAmazon\",\"client_id\":\"amzn1.application-oa2-client.d20b1378aeb44ee5a140d364d1698df6\",\"client_secret\":\"89c0631bf9edffd55d929d3269df53edabb55a7208a76ad5fb77de7f25a0bcab\"}]"
                 }
             },
             "hosting": {
