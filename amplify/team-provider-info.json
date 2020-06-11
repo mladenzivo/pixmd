@@ -16,6 +16,12 @@
                 "pixmddb38f4bd": {
                     "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"566099117422027\",\"client_secret\":\"610fc0cc5c1ca617585e467468f2c3ac\"},{\"ProviderName\":\"Google\",\"client_id\":\"224109596308-lt9l7vhq05q09gegjpav3947m1s3odhf.apps.googleusercontent.com\",\"client_secret\":\"hvsQFuE3dq2Av4f0PePT5ScL\"}]"
                 }
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d21t2v1ff50sub",
+                    "type": "cicd"
+                }
             }
         }
     }
