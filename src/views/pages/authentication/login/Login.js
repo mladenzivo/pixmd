@@ -50,7 +50,7 @@ class Login extends React.Component {
   render = () => {
     const { user } = this.props;
     const { email, password, remember } = this.state;
-
+    console.log(user)
     if (user.isAuthenticated) {
       return (
         <Redirect

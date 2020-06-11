@@ -4,7 +4,8 @@ const initialUserData = {
   isFetchUserData: false,
   isLoginSuccess: false,
   loginError: null,
-  loginLoading: false
+  loginLoading: false,
+  currentUser: {}
 };
 
 const user = (state = initialUserData, action) => {

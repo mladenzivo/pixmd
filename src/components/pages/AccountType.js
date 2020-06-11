@@ -3,9 +3,10 @@ import { Button } from "reactstrap";
 const AccountType = (props) => {
   return (
     <div className="account-type">
-      <h3>{props.accountType}</h3>
-      <div className="account-price">
-        $ <span>{props.accountPrice}</span>
+      <div className="title">{props.title}</div>
+      <div className="price">
+        <span>$</span>
+        <div>{props.price}</div>
         <p>per month</p>
       </div>
       <div className="description">
@@ -13,12 +14,13 @@ const AccountType = (props) => {
       </div>
       <hr />
       <div className="awards">
-        <p>{props.awards}</p>
+        {props.awards &&
+          props.awards.map((item, index) => <p key={index}>{item}</p>)}
       </div>
       <hr />
       <Button.Ripple
+        className="mt-2"
         color="info"
-        // onClick={() => props.onClick()}
       >
         GET STARTED
       </Button.Ripple>

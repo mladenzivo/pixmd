@@ -1,0 +1,47 @@
+$accountTypeColor: #2699fb; //$info
+
+.account-type {
+  padding: 20px;
+  color: $accountTypeColor;
+  text-align: center;
+
+  .title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font: Bold 20px/23px Arial;
+  }
+  .price {
+    position: relative;
+    font: Bold 18px/21px Arial;
+    margin-bottom: 40px;
+
+    span {
+      position: absolute;
+      top: 4px;
+      left: 35%;
+    }
+    div {
+      font: Bold 40px/45px Arial;
+    }
+    p {
+      font-family: 'Arial';
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+  .description {
+    max-width: 200px;
+    margin: auto;
+    font-family: 'Arial';
+    font-size: 14px;
+  }
+  hr {
+    border-top: 1px solid $accountTypeColor;
+    opacity: 0.1;
+    width: 240px;
+  }
+  .awards {
+    padding: 20px;
+    font: Bold 14px/30px Arial;
+  }
+}
