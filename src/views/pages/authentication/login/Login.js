@@ -19,6 +19,7 @@ import {
   userLoginRequest,
   resetLoginError,
 } from "../../../../redux/actions/user";
+import { Auth } from "aws-amplify";
 
 class Login extends React.Component {
   state = {
@@ -150,20 +151,22 @@ class Login extends React.Component {
           </FormGroup>
           <FormGroup>
             <Row>
-              <Col md={6}>
+              <Col md={6} sm={12}>
                 <Link
                   className="btn btn-primary pix_btn facebook w-100 d-flex justify-content-center align-items-center"
                   to="#"
+                  onClick={() => Auth.federatedSignIn({provider: 'Facebook'})}
                 >
                   Facebook
                 </Link>
               </Col>
-              <Col md={6}>
+              <Col md={6} sm={12}>
                 <Link
-                  className="btn btn-primary pix_btn twitter w-100 d-flex justify-content-center align-items-center"
+                  className="btn btn-primary pix_btn google w-100 d-flex justify-content-center align-items-center"
                   to="#"
+                  onClick={() => Auth.federatedSignIn({provider: 'Google'})}
                 >
-                  Twitter
+                  Google
                 </Link>
               </Col>
             </Row>

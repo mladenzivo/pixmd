@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "pixmdbb3d7072_identitypool_bb3d7072",
+    "identityPoolName": "pixmddb38f4bd_identitypool_db38f4bd",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "pixmdbb3d7072",
-    "userPoolName": "pixmdbb3d7072_userpool_bb3d7072",
+    "resourceNameTruncated": "pixmddb38f4bd",
+    "userPoolName": "pixmddb38f4bd_userpool_db38f4bd",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "pixmdbbb3d7072_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "pixmdddb38f4bd_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "bb3d7072",
-    "resourceName": "pixmdbb3d7072",
+    "sharedId": "db38f4bd",
+    "resourceName": "pixmddb38f4bd",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -45,10 +45,18 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "defaultSocial",
+    "hostedUI": true,
     "usernameAttributes": [
         "email"
     ],
+    "hostedUIDomainName": "pixmddb38f4bd-db38f4bd",
+    "authProvidersUserPool": [
+        "Facebook",
+        "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
     "userPoolGroupList": [],
     "dependsOn": []
 }
