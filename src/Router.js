@@ -35,6 +35,10 @@ const CreateSubscription = lazy(() =>
   import("./views/pages/CreateSubscription")
 )
 
+const PrivacyPolicy = lazy(() =>
+  import("./views/pages/PrivacyPolicy")
+)
+
 const Home = lazy(() =>
   import("./views/pages/Home")
 )
@@ -96,6 +100,7 @@ class AppRouter extends React.Component {
           <AppRoute path="/forgot-password" component={ForgotPassword}/>
           <AppRoute path="/reset-password" component={ResetPassword}/>
           <AppRoute path="/create-subscription" component={CreateSubscription} />
+          <AppRoute path="/privacy-policy" component={PrivacyPolicy} />
           <AppRoute path="/pages/home" component={Home} />
           <AppRoute path="/pages2" component={Page2} />
           <AppRoute exact path="/" component={LandingPage} />
