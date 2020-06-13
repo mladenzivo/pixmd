@@ -1,6 +1,6 @@
-import Amplify, { Storage, Auth } from "aws-amplify";
+import /*Amplify, */{ Storage, Auth } from "aws-amplify";
 import aws_exports from "../../aws-exports";
-Amplify.configure(aws_exports);
+//Amplify.configure(aws_exports);
 
 const { aws_user_files_s3_bucket: bucket } = aws_exports;
 
